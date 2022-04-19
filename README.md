@@ -1,0 +1,2 @@
+# StringRegExp-
+ase = ($fCase = Default) ? False : $fCase     $sCase = ($fCase = True) ? "(?s)" : "(?is)"      $sStart = StringRegExp($sString, $sStart, 1)[0]     If @error Then Return SetError(1, 0, False)      $sEnd = StringRegExp($sString, $sEnd, 1)[0]     If @error Then Return SetError(2, 0, False)      $sStart = $sStart ? "\Q" &amp; $sStart &amp; "\E" : "\A"     $sEnd = $sEnd ? "(?=\Q" &amp; $sEnd &amp; "\E)" : "\z"      Return @error ? SetError(3, 0, False) : StringRegExp($sString, $sCase
